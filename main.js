@@ -87,5 +87,5 @@ async function parseCanvas(canvas) {
 
 window.onload = () => {
 	initUI();
-	loadNewImage("select.png");
+	loadNewImage("yuanshen.jpg");
 }
