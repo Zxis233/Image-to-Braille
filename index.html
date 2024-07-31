@@ -1,40 +1,49 @@
 <html>
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Given an image, this page will display a text version using braille as 1-bit pixels">
+	<meta name="description"
+		content="Given an image, this page will display a text version using braille as 1-bit pixels">
 	<title>Image to Braille</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="braille.js"></script>
 	<script src="dithering.js"></script>
 	<script src="main.js"></script>
 </head>
+
 <body>
 	<textarea id="text" readonly></textarea>
 	<div id="options">
-		<div><a href="https://github.com/505e06b2/Image-to-Braille" target="_blank">Open Repo</a></div>
+		<div><a href="https://github.com/Zxis233/Image-to-Braille" target="_blank">项目地址😋</a></div>
+		<div><a href="https://github.com/505e06b2/Image-to-Braille" target="_blank">源项目地址🥰</a></div>
 		<div><input id="file" type="file" accept="image/*"></div>
 
-		<div title="Toggle dark theme"><input type="checkbox" id="darktheme"> Dark Theme</div>
-		<div title="Invert black with white"><input type="checkbox" id="inverted"> Invert</div>
-		<div title="Monochrome dithering"><input type="checkbox" id="dithering"> Dithering</div>
-		<div title="Disable placeholder spacing"><input type="checkbox" id="monospace"> Monospace</div>
-		<div title="Greyscale Mode">
+		<div title="切换深色主题"><input type="checkbox" id="darktheme">深色主题</div>
+		<div title="黑白反转"><input type="checkbox" id="inverted">反相</div>
+		<div title="单色抖动"><input type="checkbox" id="dithering">抖动算法</div>
+		<div title="禁用占位符宽度"><input type="checkbox" id="monospace">禁用占位符宽度</div>
+		<div title="灰度模式">
+			灰度模式
 			<select id="greyscale_mode">
-				<option value="luminance">Luminance</option>
-				<option value="lightness">Lightness</option>
-				<option value="average">Average</option>
-				<option value="value">Value</option>
+				<option value="value">二值法</option>
+				<option value="lightness">更暗</option>
+				<option value="average">平均</option>
+				<option value="luminance">更亮</option>
 			</select>
 		</div>
 		<div>
-			<input type="number" min="2" value="50" step="2" max="500" id="width">
-			Width (characters)
+			宽度 <input type="number" min="2" value="50" step="2" max="500" id="width">
 		</div>
 		<div>
-			<button id="clipboard">Copy to clipboard</button>
+			<button id="clipboard">复制到剪贴板</button>
 		</div>
 		<div>
-			Character Count: <span id="charcount">0</span>
+			字符总数: <span id="charcount">0</span>
+		</div>
+		<div>
+		</div>
+		<div style="text-align: right;margin: auto;">
+			<a href="https://blog.esing.dev" target="_blank">我的博客😃</a>
 		</div>
 	</div>
 </body>
